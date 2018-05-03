@@ -1,8 +1,10 @@
+import React, { Component } from "react";
+import { nextBusTime } from "./bus-times-table-parser";
 // Got code from https://www.w3schools.com/howto/howto_js_countdown.asp
 // Set the date we're counting down to
 // Update the count down every 1 second
 var bus = new nextBusTime();
-var updateClock = function() {
+updateClock = () => {
   // Get todays date and time
   var now = new Date();
   var day = now.getDay();
@@ -23,7 +25,7 @@ var updateClock = function() {
   var distance1;
   var distance2;
   var distance;
-  nextBuses.then(function(dates){
+  nextBuses.then((dates) => {
     for (var i = 0; i < NUM_CLOCKS; i++) {
       if(dates[i+2]<totalSeconds){
         var timeUntilStartOfWeek = secondsInWeek - totalSeconds;
@@ -70,7 +72,7 @@ var updateClock = function() {
 }
 
 
-var formatCountdown = function(distance) {
+formatCountdown = (distance) => {
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -90,5 +92,4 @@ var formatCountdown = function(distance) {
         + ('0' + minutes).slice(-2) + "m " + ('0' + seconds).slice(-2) + "s ";
 }
 
-
-setInterval(updateClock, 1000);
+export { updateClock }

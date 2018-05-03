@@ -1,3 +1,5 @@
+import React, { Component } from "react";
+import {busTime } from './parser';
 class nextBusTime {
 
 	constructor(){
@@ -160,3 +162,5 @@ class nextBusTime {
 	}
 
 }
+
+export { nextBusTime }
