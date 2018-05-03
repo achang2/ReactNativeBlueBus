@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { updateClock } from './haverford-timer';
-//import { BackgroundTimer } from 'react-native-background-timer';
+import { BackgroundTimer } from 'react-native-background-timer';
 
 export default class App extends React.Component {
 	constructor() {
@@ -10,14 +10,13 @@ export default class App extends React.Component {
          myText: "This is a placeholder text"
 	  }
 	  this.i = 0;
-	  /*
 	  if (this.timer>0) return;   // Already started
 	  this.timer = BackgroundTimer.setInterval(() => {
 		  // this will be executed every 200 ms
 		  // even when app is the the background
 		  this.setState({myText: this.i});
 		  this.i++;
-	  }, 1000);*/
+	  }, 1000);
 
    }
     render() {
