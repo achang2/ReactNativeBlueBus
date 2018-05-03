@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { updateClock } from './haverford-timer';
-import { BackgroundTimer } from 'react-native-background-timer';
+//import { BackgroundTimer } from 'react-native-background-timer';
 
 export default class App extends React.Component {
 	constructor() {
@@ -44,6 +44,10 @@ export default class App extends React.Component {
         }, 1000);
 
    }
+   updateText = () => {
+      this.setState({myText: 'My Changed Text'})
+   }
+   
 }
 
 const styles = StyleSheet.create({

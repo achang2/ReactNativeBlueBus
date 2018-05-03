@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import {busTime } from './parser';
+import React from 'react';
+import { busTime } from './parser.js';
 class nextBusTime {
 
 	constructor(){
